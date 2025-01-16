@@ -1,0 +1,22 @@
+/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3
+Full Name  : Jackey Zhou
+Student ID#: 164431223
+Email      : jzhou200@myseneca.ca
+Section    : NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+1.The first function I created prototype is integer.  int calculateTheAppointmentsArraySize(). This analyzes an array of appointment structs to find out the number of non empty appointment entries. This function iterates through the array of appointments to count the non-empty entries based on the date.day attribute. The purpose of this is to determine the actual size of the appointments array by counting the number of valid appointments there are in the array. This helps other parts of the program avoid considering empty appointment slots. This function ensures that only valid apointments are considered. 
+
+The second function I created prototype is void. void checkLeapYear(). This function prompts the user to input a year, month, and day and validate th einput based on the specific rules for each month and leap years. It prompts user to input year and month within the range (1-12). For the leap year validation, specifically Feburary it checks if the year is a leap year by using the rules ('year % 400 = 0 || year % 100 == 0 || year % 4 == 0') and sets the range of days accordingly either 28 or 29. The purpose is to ensure that the user-provided information are within the valid ranges. It helps ensure valid information is being entered and maintains data integrity.
+
+The third function I created prototype is void. void sort(struct Appointment appointments[], int max);. I used this function to sort the date by bubble sorting algorithm, it sorts an array of appointments structs and based on the date and the time values it converts from each elements to minutes to sort everything. After sorting, the code reverses the total minutes back to the original date and time for each appointment. It then subtracts the converted minutes from the total to change the date and time attributes (year, month, day, hour, minute) for each appointment.
+
+2. I would say the the scanf function calls were purposely and significantly minimized for this module is for reduced coupling. When reducing coupling it enhances the code modularity and makes it easier to test, and debugging. By minimizing the scanf function calls is to improve the user interaction, input validation, and code maintainability. I think also because by overusing the scanf function it can lead to difficulty in reading the code, when dealing with different data types and input parts. By minimizing the scanf calls it helps the modularity, more organized code structure, and makes it easier to understand and maintain it. Another reason could be that for input validation the scanf function could lead to errors and overflows, so if I do  minimize the use of the scanf function, the code I write can focus on implementing through input validation and error handling, that will help ensure the code input is correctly handled and processed leading this to prevent crashes and unexpected errors.
+
+3. According the first question, I created two helper functions to this program. For the first function, it focuses on checking if the appointment has non-empty appointment entries. I used this function in viewAllAppointments(), viewAppointmentSchedule(), addAppointment(), and removeAppointment() to check if there was non-empty appointment entries. For the second function I used it to check the leap years when the user is prompted to enter a year and month. I used this function in viewAppointmentSchedule(), addAppointment(), and removeAppointment() to check if there was a leap year. If not then it will print the data of the entered year/month from the user. The third function i used is a bubble sort. I used this function in viewAllAppointments(), and removeAppointment(). This function focuses on sorting everything from the database of file. Therefore the 2 functions above need to use bubble sort algorithim to sort an array of appointment structs based on the date and time values.
